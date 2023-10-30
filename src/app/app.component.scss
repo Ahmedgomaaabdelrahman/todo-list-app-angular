@@ -1,0 +1,21 @@
+$primary-color: #03B0AC;
+$secondary-color: #004E75;
+$background-color: #F0EFEA;
+$text-color: #5C606B;
+$accent-color: #49BB88;
+$hover-color: #49C48E;
+
+.main {
+    height: calc(100vh - 15rem);
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    padding: 1.8rem 3.2rem;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+  

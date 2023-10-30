@@ -1,0 +1,20 @@
+<div class="form-container">
+    <form #inputForm="ngForm" (ngSubmit)="saveData(inputForm)">
+      <div class="form-group">
+        <label for="inputValue">Title*</label>
+        <input type="text" id="titleValue" name="titleValue" [(ngModel)]="titleValue" class="form-control" required>
+       
+      </div>
+      <div class="form-group">
+        <label for="descriptionValue">Description*</label>
+        <textarea id="descriptionValue" name="descriptionValue" [(ngModel)]="descriptionValue" class="form-control" rows="4" required></textarea>
+      </div>
+
+      <p *ngIf="error" class="add-edit-error">{{error}}</p>
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" (click)="cancel()" class="btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

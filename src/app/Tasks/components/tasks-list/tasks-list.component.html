@@ -1,0 +1,39 @@
+
+<section class="tasks-container" >
+    <header class="day-information">
+        <div class="day-parts">
+            <p class="day">{{ today | date: 'd' }}</p>
+            <p class="month">{{ today | date: 'MMM' }}</p>
+            <p class="year">{{ today | date: 'y' }} </p>
+        </div>
+        <div class="day-of-week">
+            <p>{{dayOfWeek}}</p>
+        </div>
+
+    </header>
+    <app-search></app-search>
+    <section class="tasks-list-container">
+        
+        <ul class="tasks-list" id="tasks_list" 
+            *ngIf="(tasksList | filter:filterValue).length > 0 ; else noTasks">
+            <app-task *ngFor="let task of tasksList | filter:filterValue" [task]="task"></app-task>
+           
+        </ul>
+
+        <ng-template #noTasks>
+            <h2 class="noTasks">{{ filterValue != '' ? 'There is no tasks found' : 'There is no tasks added for this day' }}</h2>
+        </ng-template>
+
+      
+  
+
+    </section>
+    <div class="add-new-task-container">
+        <a id="add-new-task" routerLink="/add"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+        </a>
+    </div>
+    <!-- <app-spinner *ngIf="showSpinner"></app-spinner> -->
+</section>
+
+   

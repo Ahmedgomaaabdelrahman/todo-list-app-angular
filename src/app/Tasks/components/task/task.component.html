@@ -1,0 +1,74 @@
+<li class="tasks-list-item {{rtlDirection ? 'rtlDirection' : ''}}">
+    <input type="checkbox" name="task{{task?.id}}" id="task{{task?.id}}" class="checkbox" (change)="onChangeTask()" [checked]="task?.taskIsDone"> 
+    <label for="task{{task?.id}}" title="{{task?.description}}"> 
+        <span> 
+            {{task?.title}}
+        </span> 
+    </label>
+
+    <div class="action-btns-container">
+        <a type="button" routerLink="/edit/{{task?.id}}" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button" (click) = "deleteTaskById()"><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+</li>
+<!-- 
+<li class="tasks-list-item">
+    <input type="checkbox" name="task2" id="task2" class="checkbox" checked> 
+    <label for="task2">  <span> Begin promotional phase </span></label>
+
+    <div class="action-btns-container">
+        <a type="button" routerLink="/add" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button"  ><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+
+</li>
+
+<li class="tasks-list-item ">
+    <input type="checkbox" name="task3" id="task3" class="checkbox"> 
+    <label for="task3" title="Read an article  Read an article  Read an article  Read an article  Read an article  Read an article "> <span> Read an article  Read an article  Read an article  Read an article  Read an article  Read an article </span> </label>
+    <div class="action-btns-container">
+        <a type="button" routerLink="/add" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button"  ><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+</li>
+
+
+<li class="tasks-list-item ">
+    <input type="checkbox" name="task4" id="task4" class="checkbox"> 
+    <label for="task4"> <span> Try not to fall asleep </span>  </label>
+    <div class="action-btns-container">
+        <a type="button" routerLink="/add" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button"  ><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+</li>
+
+<li class="tasks-list-item ">
+    <input type="checkbox" name="task5" id="task5" class="checkbox"> 
+    <label for="task5"> <span>  Watch 'Sherlock' </span>  </label>
+    <div class="action-btns-container">
+        <a type="button" routerLink="/add" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button"  ><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+
+</li>
+
+<li class="tasks-list-item ">
+    <input type="checkbox" name="task6" id="task6" class="checkbox"> 
+    <label for="task6"> <span> Begin QA for the product </span>   </label>
+    <div class="action-btns-container">
+        <a type="button" routerLink="/add" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button"  ><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+</li>
+
+<li class="tasks-list-item ">
+    <input type="checkbox" name="task7" id="task7" class="checkbox"> 
+    <label for="task7"> <span> Go for a walk  </span> </label>
+
+    <div class="action-btns-container">
+        <a type="button" routerLink="/add" ><img src="../../../../assets/imgs/edit.png"/></a>
+        <a type="button"  ><img src="../../../../assets/imgs/remove.png"/></a>
+    </div>
+</li>
+ -->
+
